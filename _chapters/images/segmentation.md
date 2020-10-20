@@ -25,11 +25,11 @@ The table of contents
 
 
 
-*   Gestalt Theory of Perceptual Grouping
-*   Agglomerative Clustering-based Segmentation
-*   Graph-based Segmentation
+*   [Gestalt Theory of Perceptual Grouping](#gestalt)
+*   [Agglomerative Clustering-based Segmentation](#agglom)
+*   [Graph-based Segmentation](#graph_based_seg)
 
-
+<a name="gestalt"></a>
 # Gestalt Theory of Perceptual Grouping
 
 ***The Gestalt School:*** Grouping elements and understanding relationships between elements are key parts of our visual perception. For vision, we could say that “The whole is greater than the sum of parts.” Consider how elements in the figure below take on much more meaning when considered altogether. 
@@ -121,10 +121,8 @@ For grouping in Gestalt Theory, we can use several different factors. These incl
 
 ![alt_text](../../assets/images/segmentation/image30.png "image_tooltip")
 
-# Agglomerative Clustering-based 
-
-
-# Segmentation
+<a name="agglom"></a>
+# Agglomerative Clustering-based Segmentation
 
 One way to think about segmentation tasks is to think of them as clustering tasks. Clustering is an unsupervised learning technique where the object is to group together similar data points x<sub>1</sub>, …, x<sub>n</sub> ∈ ℝ<sup>d</sup> (like pixels) into a cluster and represent them with a single token. Clustering extends beyond segmentation and can be used for prediction, counting, and data summarization tasks. 
 
@@ -266,7 +264,7 @@ The drawbacks:
 *   Does not scale well due it runtime of O(n^3)
 *   Can get stuck at a local optima.
 
-
+<a name="graph_based_seg"></a>
 # Graph-based Segmentation
 
 A graph, G, is made up of a set of vertices, V, and edges, E. Each edge has a weight w(v_i, v_j), where v_i and v_j are vertices in V. So, we want to find some segmentation of G, which we call S, such that G’ =(V, E’) where E’ ⊂ E. S divides G into G’ such that it contains distinct cluster C. Click 
