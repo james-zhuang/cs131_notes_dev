@@ -3,6 +3,8 @@ title: Segmentation
 keywords: (insert comma-separated keywords here)
 order: 9 # Lecture number for 2020
 ---
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 <!-----
 NEW: Check the "Suppress top comment" option to remove this info from the output.
@@ -99,11 +101,7 @@ You have 9 H1 headings. You may want to use the "H1 -> H2" option to demote all 
 Image segmentation has a number of key goals: identify groups of pixels / image regions that go together, separate images into coherent “objects” or regions, group together similar-looking pixels for efficiency in future processing and others. An example of image segmentation that identifies groups of pixels that go together is shown below: 
 
 
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image1.png "image_tooltip")
+![alt_text](../../assets/images/segmentation/image1.png "image_tooltip")
 
 
 Tiger segmentation example from lecture 9.1
@@ -122,11 +120,7 @@ The table of contents
 ***The Gestalt School: *** Grouping elements and understanding relationships between elements are key parts of our visual perception. For vision, we could say that “The whole is greater than the sum of parts.” Consider how elements in the figure below take on much more meaning when considered altogether. 
 
 
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image2.png "image_tooltip")
+![alt_text](../../assets/images/segmentation/image2.png "image_tooltip")
 
 
 From this example, we see that grouping together the elements on the right holds far more meaning than looking at each component individually like on the left. This example specifically represents the Law of Closure in Gestalt theory, which will be discussed shortly.
@@ -139,21 +133,16 @@ The Gestalt school of thought broke down the ways in which we group elements int
 ***Proximity:*** Things that are close together appear to be more related than things that are farther apart. 
 
 
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image3.png "image_tooltip")
+![alt_text](../../assets/images/segmentation/image3.png "image_tooltip")
 
 
 ***Similarity:*** When things appear similar to each other, we group them together and tend to think they have the same function.
 
 
 
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image4.png "image_tooltip")
+![alt_text](../../assets/images/segmentation/image4.png "image_tooltip")
 
 
 Similar colors are automatically grouped together by our visual perception.
@@ -162,60 +151,53 @@ Similar colors are automatically grouped together by our visual perception.
 
 
 
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image5.png "image_tooltip")
+![alt_text](../../assets/images/segmentation/image5.png "image_tooltip")
 
 
 ***Common Region:*** When objects lie within the same closed region, they are grouped together. 
 
 
 
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-
-![alt_text](images/image6.png "image_tooltip")
+![alt_text](../../assets/images/segmentation/image6.png "image_tooltip")
 
 
 ***Continuity:*** Elements arranged on a line or curve are perceived to be more related than elements not on the line or curve, despite any occlusions.
 
 
 
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image7.png "image_tooltip")
+![alt_text](../../assets/images/segmentation/image7.png "image_tooltip")
 
 
 ***Closure:***  We tend to look for a single recognizable pattern when looking at a complex arrangement of visual elements.
 
 
 
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image8.png "image_tooltip")
+![alt_text](../../assets/images/segmentation/image8.png "image_tooltip")
 
 
 ***Symmetry:*** Elements that are symmetrical to each other tend to be perceived as a unified group.
 
 
 
-<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image9.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image9.png "image_tooltip")
+![alt_text](../../assets/images/segmentation/image9.png "image_tooltip")
 
 
 Despite the importance of Gestalt factors, they are unfortunately very difficult to translate to algorithms. 
 
 
 
-<p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image10.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image10.png "image_tooltip")
+![alt_text](../../assets/images/segmentation/image10.png "image_tooltip")
 
 
 Here, we see that the grouping of different shapes has a huge role on how our brain perceives the image. In image D, the image looks like a snake, rather than just a random group of squiggly lines, and in image C, our brain tells us that there is a 3-dimensional sphere with connected spikes, even though neither of these images contain only one color (black) or any depth.
@@ -228,7 +210,7 @@ For grouping in Gestalt Theory, we can use several different factors. These incl
 
 # Segmentation
 
-One way to think about segmentation tasks is to think of them as clustering tasks. Clustering is an unsupervised learning technique where the object is to group together similar data points _x<sub>1</sub>, …, x<sub>n</sub> _∈ ℝ<sup>d</sup> (like pixels) into a cluster and represent them with a single token. Clustering extends beyond segmentation and can be used for prediction, counting, and data summarization tasks. 
+One way to think about segmentation tasks is to think of them as clustering tasks. Clustering is an unsupervised learning technique where the object is to group together similar data points x<sub>1</sub>, …, x<sub>n</sub> ∈ ℝ<sup>d</sup> (like pixels) into a cluster and represent them with a single token. Clustering extends beyond segmentation and can be used for prediction, counting, and data summarization tasks. 
 
 ****Agglomerative clustering**** is a “bottoms-up” approach to clustering where the idea is to look at a distance / similarity measurement between clusters of data points in order to iteratively merge each cluster with the closest cluster. In agglomerative clustering, each data point starts in its own cluster, leading to a “bottoms-up” clustering process where clusters form as data points begin to merge with their most similar pairings.
 
@@ -249,21 +231,12 @@ In order to group similar data points together, we need a pairwise distance or s
 
 The Euclidean distance measures the distances between two data points x and x’ ∈ ℝ<sup>d</sup> by considering the intuitive straight-line distance between the two points in Euclidean space: 
 
-
-
-<p id="gdcalert11" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert12">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
+$$ dist(x, x') = \sqrt{\sum (x_i - x_i')^2} $$ 
 
 
 The cosine similarity measure accounts for the angle between the two given data points and is defined as:
 
-
-
-<p id="gdcalert12" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert13">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-
-<p id="gdcalert13" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert14">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+$$ sim(x, x') = \cos(\theta) = \frac{x^Tx'}{||x|| \cdot ||x'||} = \frac{x^Tx'}{\sqrt{x^Tx} \cdot \sqrt{x'^Tx'}} $$
 
 
 
@@ -287,10 +260,8 @@ The agglomerative clustering algorithm works by initializing each data point as 
 
 
 
-<p id="gdcalert14" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image11.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert15">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-
-![alt_text](images/image11.png "image_tooltip")
+![alt_text](../../assets/images/segmentation/image11.png "image_tooltip")
 
 
 The first step has all the data points isolated into their own cluster group labeled “A” through “E”. In each step, the algorithm takes the two most similar clusters and merges them together (the red cluster is the first cluster pair that merges together) until the last two cluster groups are merged together and every data point is grouped under one cluster (the purple cluster). The resulting dendrogram clustering result is seen in the final picture. 
@@ -324,20 +295,16 @@ Below are three different schemes for determining the similarity or distance bet
 
 
 
-<p id="gdcalert15" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image12.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert16">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+![alt_text](../../assets/images/segmentation/image12.png "image_tooltip")
 
 
-![alt_text](images/image12.png "image_tooltip")
-
-
-With single linkage, one can set a threshold and stop clustering once the distance between clusters is above the threshold. SIngle linkage tends to produce long and skinny clusters:
+With single linkage, one can set a threshold and stop clustering once the distance between clusters is above the threshold. Single linkage tends to produce long and skinny clusters:
 
 
 
-<p id="gdcalert16" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image13.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert17">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-
-![alt_text](images/image13.png "image_tooltip")
+![alt_text](../../assets/images/segmentation/image13.png "image_tooltip")
  
 
 
@@ -348,20 +315,18 @@ With single linkage, one can set a threshold and stop clustering once the distan
 
 
 
-<p id="gdcalert17" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image14.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert18">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image14.png "image_tooltip")
+![alt_text](../../assets/images/segmentation/image14.png "image_tooltip")
 
 
 Complete linkage tends to produce “tight” clusters that are compact and roughly equal in diameter:
 
 
 
-<p id="gdcalert18" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image15.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert19">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image15.png "image_tooltip")
+![alt_text](../../assets/images/segmentation/image15.png "image_tooltip")
 
 
 
@@ -372,20 +337,18 @@ Complete linkage tends to produce “tight” clusters that are compact and roug
 
 
 
-<p id="gdcalert19" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image16.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert20">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image16.png "image_tooltip")
+![alt_text](../../assets/images/segmentation/image16.png "image_tooltip")
 
 
 Average linkage tends to be more robust to noise since the distance measurement is not dependent on any one data point pair:
 
 
 
-<p id="gdcalert20" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image17.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert21">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image17.png "image_tooltip")
+![alt_text](../../assets/images/segmentation/image17.png "image_tooltip")
 
 
 
@@ -412,112 +375,55 @@ The drawbacks:
 *   Can get stuck at a local optima.
 
 
-# Graph-based Segmentation (jacob palisch- jpalisch)
+# Graph-based Segmentation
 
 A graph, G, is made up of a set of vertices, V, and edges, E. Each edge has a weight w(v_i, v_j), where v_i and v_j are vertices in V. So, we want to find some segmentation of G, which we call S, such that G’ =(V, E’) where E’ ⊂ E. S divides G into G’ such that it contains distinct cluster C. Click 
-
-<p id="gdcalert21" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "here to see graphs in computer vision"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert22">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[here to see graphs in computer vision](#heading=h.uukt8vjex0pc)
+[here to see graphs in computer vision.](#heading=h.uukt8vjex0pc)
 
 So how do we define these clusterings?
 
-<p id="gdcalert22" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert23">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-
 We define 2 functions for comparing clusterings.
 
-<p id="gdcalert23" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert24">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+$$ For two clusters $C_1$ and $C_2$:
+
+$$ Merge(C_1, C_2) \text{if} diff(C_1, C_2) < in(C_1, C_2)$$ 
 
 
-
-For two clusters 
-
-<p id="gdcalert24" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert25">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-and 
-
-<p id="gdcalert25" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert26">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-:
+[Diff -> difference between clusterings](#diff_between_clusterings)
 
 
+[In -> internal difference between clusterings](#internal_between_clusterings)
 
-<p id="gdcalert26" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert27">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
- if 
-
-<p id="gdcalert27" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert28">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-
-
-
-<p id="gdcalert28" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Diff -> difference between clusterings"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert29">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[Diff -> difference between clusterings](#heading=h.re5gi23ydn10)
-
-
-
-<p id="gdcalert29" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "In -> internal difference between clusterings"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert30">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[In -> internal difference between clusterings](#heading=h.gp7eu2t3oo7z)
-
-
+<a name="diff_between_clusterings"></a>
 # Difference Between Clusterings
 
 The difference between clusterings is simple.
 
-For two clusters 
+For two clusters $C_1, C_2 \in E $, the difference between them is defined by:
 
-<p id="gdcalert30" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert31">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-, the difference between them is defined by:
-
-	
-
-<p id="gdcalert31" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert32">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
+$$ Diff(C_1, C_2) = v_i \in C_1, v_j \in C_2(min[w(v_1, v_j)])
 
 
 In other words, the difference between two clusterings is the shortest distance between two points in opposite clusters.
 
 
+<a name="internal_between_clusterings"></a>
 # Internal Difference Between Clusterings
 
 The internal difference is a slightly more complicated calculation.
 
-For two clusters 
+For two clusters $C_1$ and $C_2$, the internal difference between them is defined by:
 
-<p id="gdcalert32" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert33">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-and 
-
-<p id="gdcalert33" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert34">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-, the internal difference between them is defined by:
-
-	
-
-<p id="gdcalert34" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert35">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+$$In(C_1, C_2) = C \in \{C_1, C_2\} min[v_i, v_j \in C max[w(v_i, v_j) + \frac{k}{|C|}]]
 
 
+In simpler terms, the internal difference is the maximum weight edge that connects two nodes in the same component, plus some constant $\frac{k}{|C|}$
 
-In simpler terms, the internal difference is the maximum weight edge that connects two nodes in the same component, plus some constant 
-
-<p id="gdcalert35" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert36">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
- 
 
 This constant sets the threshold by which the components need to be different. If you select higher k, you are able to create a preference for larger groupings. However it does not set a minimum.
 
 
-
-<p id="gdcalert36" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image18.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert37">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image18.png "image_tooltip")
+![alt_text](../../assets/images/segmentation/image18.png "image_tooltip")
  
 
 
