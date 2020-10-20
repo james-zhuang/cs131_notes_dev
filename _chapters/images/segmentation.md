@@ -6,97 +6,11 @@ order: 9 # Lecture number for 2020
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-<!-----
-NEW: Check the "Suppress top comment" option to remove this info from the output.
-
-Conversion time: 5.586 seconds.
-
-
-Using this Markdown file:
-
-1. Paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* Docs to Markdown version 1.0β29
-* Mon Oct 19 2020 22:50:28 GMT-0700 (PDT)
-* Source doc: CS131 Oct 13 Lecture Notes
-
-WARNING:
-You have some equations: look for ">>>>>  gd2md-html alert:  equation..." in output.
-
-
-ERROR:
-undefined internal link to this URL: "#heading=h.uukt8vjex0pc".link text: here to see graphs in computer vision
-?Did you generate a TOC?
-
-
-ERROR:
-undefined internal link to this URL: "#heading=h.re5gi23ydn10".link text: Diff -> difference between clusterings
-?Did you generate a TOC?
-
-
-ERROR:
-undefined internal link to this URL: "#heading=h.gp7eu2t3oo7z".link text: In -> internal difference between clusterings
-?Did you generate a TOC?
-
-* This document has images: check for >>>>>  gd2md-html alert:  inline image link in generated source and store images to your server. NOTE: Images in exported zip file from Google Docs may not appear in  the same order as they do in your doc. Please check the images!
-
-
-WARNING:
-You have 9 H1 headings. You may want to use the "H1 -> H2" option to demote all headings by one level.
-
------>
-
-
-<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 3; WARNINGs: 2; ALERTS: 36.</p>
-<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
-
-<p style="color: red; font-weight: bold">Links to alert messages:</p><a href="#gdcalert1">alert1</a>
-<a href="#gdcalert2">alert2</a>
-<a href="#gdcalert3">alert3</a>
-<a href="#gdcalert4">alert4</a>
-<a href="#gdcalert5">alert5</a>
-<a href="#gdcalert6">alert6</a>
-<a href="#gdcalert7">alert7</a>
-<a href="#gdcalert8">alert8</a>
-<a href="#gdcalert9">alert9</a>
-<a href="#gdcalert10">alert10</a>
-<a href="#gdcalert11">alert11</a>
-<a href="#gdcalert12">alert12</a>
-<a href="#gdcalert13">alert13</a>
-<a href="#gdcalert14">alert14</a>
-<a href="#gdcalert15">alert15</a>
-<a href="#gdcalert16">alert16</a>
-<a href="#gdcalert17">alert17</a>
-<a href="#gdcalert18">alert18</a>
-<a href="#gdcalert19">alert19</a>
-<a href="#gdcalert20">alert20</a>
-<a href="#gdcalert21">alert21</a>
-<a href="#gdcalert22">alert22</a>
-<a href="#gdcalert23">alert23</a>
-<a href="#gdcalert24">alert24</a>
-<a href="#gdcalert25">alert25</a>
-<a href="#gdcalert26">alert26</a>
-<a href="#gdcalert27">alert27</a>
-<a href="#gdcalert28">alert28</a>
-<a href="#gdcalert29">alert29</a>
-<a href="#gdcalert30">alert30</a>
-<a href="#gdcalert31">alert31</a>
-<a href="#gdcalert32">alert32</a>
-<a href="#gdcalert33">alert33</a>
-<a href="#gdcalert34">alert34</a>
-<a href="#gdcalert35">alert35</a>
-<a href="#gdcalert36">alert36</a>
-
-<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
-
-
-
-# Segmentation
+<style>
+img {
+    max-width: 100%;
+}
+</style>
 
 Image segmentation has a number of key goals: identify groups of pixels / image regions that go together, separate images into coherent “objects” or regions, group together similar-looking pixels for efficiency in future processing and others. An example of image segmentation that identifies groups of pixels that go together is shown below: 
 
@@ -384,10 +298,11 @@ So how do we define these clusterings?
 
 We define 2 functions for comparing clusterings.
 
-$$ For two clusters $C_1$ and $C_2$:
+For two clusters $C_1$ and $C_2$:
 
-$$ Merge(C_1, C_2) \text{if} diff(C_1, C_2) < in(C_1, C_2)$$ 
+$$ Merge(C_1, C_2) \text{if} diff(C_1, C_2) < in(C_1, C_2) $$ 
 
+![alt_text](../../assets/images/segmentation/image15.png "image_tooltip")
 
 [Diff -> difference between clusterings](#diff_between_clusterings)
 
@@ -401,7 +316,7 @@ The difference between clusterings is simple.
 
 For two clusters $C_1, C_2 \in E $, the difference between them is defined by:
 
-$$ Diff(C_1, C_2) = v_i \in C_1, v_j \in C_2(min[w(v_1, v_j)])
+$$ Diff(C_1, C_2) = v_i \in C_1, v_j \in C_2(min[w(v_1, v_j)]) $$ 
 
 
 In other words, the difference between two clusterings is the shortest distance between two points in opposite clusters.
@@ -414,10 +329,11 @@ The internal difference is a slightly more complicated calculation.
 
 For two clusters $C_1$ and $C_2$, the internal difference between them is defined by:
 
-$$In(C_1, C_2) = C \in \{C_1, C_2\} min[v_i, v_j \in C max[w(v_i, v_j) + \frac{k}{|C|}]]
+$$ In(C_1, C_2) = C \in \{C_1, C_2\} min[v_i, v_j \in C max[w(v_i, v_j) + \frac{k}{|C|}]] $$
 
 
-In simpler terms, the internal difference is the maximum weight edge that connects two nodes in the same component, plus some constant $\frac{k}{|C|}$
+In simpler terms, the internal difference is the maximum weight edge that connects two nodes in the same component, plus some constant 
+$$ \frac{k}{|C|} $$
 
 
 This constant sets the threshold by which the components need to be different. If you select higher k, you are able to create a preference for larger groupings. However it does not set a minimum.
