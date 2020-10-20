@@ -7,10 +7,11 @@ order: 9 # Lecture number for 2020
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 <style>
-img {
-    max-width: 100%;
-}
+    img {
+        max-width: 100%
+    }
 </style>
+
 
 Image segmentation has a number of key goals: identify groups of pixels / image regions that go together, separate images into coherent “objects” or regions, group together similar-looking pixels for efficiency in future processing and others. An example of image segmentation that identifies groups of pixels that go together is shown below: 
 
@@ -31,7 +32,7 @@ The table of contents
 
 # Gestalt Theory of Perceptual Grouping
 
-***The Gestalt School: *** Grouping elements and understanding relationships between elements are key parts of our visual perception. For vision, we could say that “The whole is greater than the sum of parts.” Consider how elements in the figure below take on much more meaning when considered altogether. 
+***The Gestalt School:*** Grouping elements and understanding relationships between elements are key parts of our visual perception. For vision, we could say that “The whole is greater than the sum of parts.” Consider how elements in the figure below take on much more meaning when considered altogether. 
 
 
 ![alt_text](../../assets/images/segmentation/image2.png "image_tooltip")
@@ -40,7 +41,7 @@ The table of contents
 From this example, we see that grouping together the elements on the right holds far more meaning than looking at each component individually like on the left. This example specifically represents the Law of Closure in Gestalt theory, which will be discussed shortly.
 
 
-# ### Gestalt Factors
+# Gestalt Factors
 
 The Gestalt school of thought broke down the ways in which we group elements into several principles.
 
@@ -118,6 +119,7 @@ Here, we see that the grouping of different shapes has a huge role on how our br
 
 For grouping in Gestalt Theory, we can use several different factors. These include, proximity, similarity, common fate, common region, parallelism, symmetry, continuity, and closure. Some factors are harder to determine than others, such as parallelism. As mentioned in lecture, it’s difficult for the computer to determine elements in parallel in the image. 
 
+![alt_text](../../assets/images/segmentation/image30.png "image_tooltip")
 
 # Agglomerative Clustering-based 
 
@@ -126,7 +128,7 @@ For grouping in Gestalt Theory, we can use several different factors. These incl
 
 One way to think about segmentation tasks is to think of them as clustering tasks. Clustering is an unsupervised learning technique where the object is to group together similar data points x<sub>1</sub>, …, x<sub>n</sub> ∈ ℝ<sup>d</sup> (like pixels) into a cluster and represent them with a single token. Clustering extends beyond segmentation and can be used for prediction, counting, and data summarization tasks. 
 
-****Agglomerative clustering**** is a “bottoms-up” approach to clustering where the idea is to look at a distance / similarity measurement between clusters of data points in order to iteratively merge each cluster with the closest cluster. In agglomerative clustering, each data point starts in its own cluster, leading to a “bottoms-up” clustering process where clusters form as data points begin to merge with their most similar pairings.
+***Agglomerative clustering*** is a “bottoms-up” approach to clustering where the idea is to look at a distance / similarity measurement between clusters of data points in order to iteratively merge each cluster with the closest cluster. In agglomerative clustering, each data point starts in its own cluster, leading to a “bottoms-up” clustering process where clusters form as data points begin to merge with their most similar pairings.
 
 Table of contents:
 
@@ -141,7 +143,7 @@ Table of contents:
 
 # Distance Measures 
 
-In order to group similar data points together, we need a pairwise distance or similarity function between items in order to evaluate which data points are most similar to each other. When data (e.g. images, objects, documents) are represented by feature vectors, commonly used measures include **_**euclidean distance**_** or **_**cosine similarity**_**
+In order to group similar data points together, we need a pairwise distance or similarity function between items in order to evaluate which data points are most similar to each other. When data (e.g. images, objects, documents) are represented by feature vectors, commonly used measures include ***euclidean distance*** or ***cosine similarity***
 
 The Euclidean distance measures the distances between two data points x and x’ ∈ ℝ<sup>d</sup> by considering the intuitive straight-line distance between the two points in Euclidean space: 
 
@@ -161,10 +163,10 @@ There are multiple properties that one must consider when choosing or designing 
 
 
 
-1. **Scalability_ _**(in terms of both running time and memory space)
-2. **Different data types **(maintains the ability to deal with different data types)
-3. **Input parameters **(has minimal requirements for domain knowledge in order to tune any input parameters for the algorithm)
-4. **Interpretable_ _**(the results should be able to be understood and interpreted)
+1. **Scalability**(in terms of both running time and memory space)
+2. **Different data types**(maintains the ability to deal with different data types)
+3. **Input parameters**(has minimal requirements for domain knowledge in order to tune any input parameters for the algorithm)
+4. **Interpretable**(the results should be able to be understood and interpreted)
 5. **Customizable** (allows for the incorporation of user-specified constraints)
 
 
@@ -203,23 +205,16 @@ Below are three different schemes for determining the similarity or distance bet
 
 
 
-1. **Single Link **
+1. **Single Link**
 
 	In a single link scheme, we compare clusters by utilizing the minimum distance between two points in each cluster. This is equivalent to determining the minimum spanning tree between clusters. The distance between clusters is computed with the following formula
 
+    $$ d(C_i, C_j) = min_{x \in C_i, x' \in C_j} d(x, x') $$
 
 
+    With single linkage, one can set a threshold and stop clustering once the distance between clusters is above the threshold. Single linkage tends to produce long and skinny clusters:
 
-![alt_text](../../assets/images/segmentation/image12.png "image_tooltip")
-
-
-With single linkage, one can set a threshold and stop clustering once the distance between clusters is above the threshold. Single linkage tends to produce long and skinny clusters:
-
-
-
-
-![alt_text](../../assets/images/segmentation/image13.png "image_tooltip")
- 
+    ![alt_text](../../assets/images/segmentation/image12.png "image_tooltip")
 
 
 
@@ -227,21 +222,12 @@ With single linkage, one can set a threshold and stop clustering once the distan
 
 	In a complete link scheme, we compare clusters by utilizing the maximum distance between two points in each cluster. The distance formula is given by:
 
+    $$ d(C_i, C_j) = max_{x \in C_i, x' \in C_j} d(x, x') $$
+    
 
+    Complete linkage tends to produce “tight” clusters that are compact and roughly equal in diameter:
 
-
-
-![alt_text](../../assets/images/segmentation/image14.png "image_tooltip")
-
-
-Complete linkage tends to produce “tight” clusters that are compact and roughly equal in diameter:
-
-
-
-
-
-![alt_text](../../assets/images/segmentation/image15.png "image_tooltip")
-
+    ![alt_text](../../assets/images/segmentation/image13.png "image_tooltip")
 
 
 
@@ -250,19 +236,11 @@ Complete linkage tends to produce “tight” clusters that are compact and roug
 	In an average link scheme, we compare clusters by utilizing the average distance between items in a cluster pair. The formula is given by:
 
 
+    $$ d(C_i, C_j) = \frac{\sum x \in C_i, x' \in C_j d(x, x')}{|C_i| \cdot |C_j|} $$
 
+    Average linkage tends to be more robust to noise since the distance measurement is not dependent on any one data point pair:
 
-
-![alt_text](../../assets/images/segmentation/image16.png "image_tooltip")
-
-
-Average linkage tends to be more robust to noise since the distance measurement is not dependent on any one data point pair:
-
-
-
-
-
-![alt_text](../../assets/images/segmentation/image17.png "image_tooltip")
+    ![alt_text](../../assets/images/segmentation/image14.png "image_tooltip")
 
 
 
@@ -292,7 +270,7 @@ The drawbacks:
 # Graph-based Segmentation
 
 A graph, G, is made up of a set of vertices, V, and edges, E. Each edge has a weight w(v_i, v_j), where v_i and v_j are vertices in V. So, we want to find some segmentation of G, which we call S, such that G’ =(V, E’) where E’ ⊂ E. S divides G into G’ such that it contains distinct cluster C. Click 
-[here to see graphs in computer vision.](#heading=h.uukt8vjex0pc)
+[here to see graphs in computer vision.](#graphs_in_cv)
 
 So how do we define these clusterings?
 
@@ -300,14 +278,14 @@ We define 2 functions for comparing clusterings.
 
 For two clusters $C_1$ and $C_2$:
 
-$$ Merge(C_1, C_2) \text{if} diff(C_1, C_2) < in(C_1, C_2) $$ 
+$$ Merge(C_1, C_2) \text{if} diff(C_1, C_2) < in(C_1, C_2)$$ 
 
-![alt_text](../../assets/images/segmentation/image15.png "image_tooltip")
 
 [Diff -> difference between clusterings](#diff_between_clusterings)
 
 
 [In -> internal difference between clusterings](#internal_between_clusterings)
+![alt_text](../../assets/images/segmentation/image15.png "image_tooltip")
 
 <a name="diff_between_clusterings"></a>
 # Difference Between Clusterings
@@ -329,7 +307,7 @@ The internal difference is a slightly more complicated calculation.
 
 For two clusters $C_1$ and $C_2$, the internal difference between them is defined by:
 
-$$ In(C_1, C_2) = C \in \{C_1, C_2\} min[v_i, v_j \in C max[w(v_i, v_j) + \frac{k}{|C|}]] $$
+$$In(C_1, C_2) = C \in \{C_1, C_2\} min[v_i, v_j \in C\ max[w(v_i, v_j) + \frac{k}{|C|}]] $$
 
 
 In simpler terms, the internal difference is the maximum weight edge that connects two nodes in the same component, plus some constant 
@@ -342,14 +320,14 @@ This constant sets the threshold by which the components need to be different. I
 ![alt_text](../../assets/images/segmentation/image18.png "image_tooltip")
  
 
-
+<a name="graphs_in_cv"></a>
 # Graphs in Computer Vision
 
 Every pixel is defined by their (x,y) location, but also by their (r,g,b) values. Thus we can define a screen space as a graph defined by (x,y,r,g,b).
 
-**Edges **are between every perpendicular neighboring pixel.
+**Edges** are between every perpendicular neighboring pixel.
 
-**Weights **are the difference in pixel intensities (r,g,b)
+**Weights** are the difference in pixel intensities (r,g,b)
 
 	Determined using L2, or Euclidean, distance in this feature space(x,y,r,g,b)
 
