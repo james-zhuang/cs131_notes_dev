@@ -21,7 +21,16 @@ Image segmentation has a number of key goals: identify groups of pixels / image 
 
 Tiger segmentation example from lecture 9.1
 
-The table of contents
+One way to think about image segmentation is through clustering as similar data points (pixels) as represented by a token. This gives us the ability to do a number of things such as:
+
+*   Summarizing data (addressing large amounts of data, compression or denoising, continuous vectors)
+*   Counting (histograms of texture, color, SIFT vectors)
+*   Segmentation (separating images into different regions)
+*   Prediction (where images in same cluster have same labels)
+
+We'll specifically be looking at clustering for Segmentation in these notes.
+
+Table of contents
 
 
 
