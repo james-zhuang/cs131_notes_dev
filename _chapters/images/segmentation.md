@@ -272,17 +272,16 @@ A graph, G, is made up of a set of vertices, V, and edges, E. Each edge has a we
 
 So how do we define these clusterings?
 
-We define 2 functions for comparing clusterings.
+We define a predicate, D, for comparing clusterings.
 
 For two clusters $C_1$ and $C_2$:
 
-$$ Merge(C_1, C_2) \text{if} diff(C_1, C_2) < in(C_1, C_2)$$ 
+$$ Merge(C_1, C_2) \text{if}  diff(C_1, C_2) < in(C_1, C_2)$$ 
+
+Where [Diff = difference between clusterings](#diff_between_clusterings)
+and [In = internal difference between clusterings](#internal_between_clusterings)
 
 
-[Diff -> difference between clusterings](#diff_between_clusterings)
-
-
-[In -> internal difference between clusterings](#internal_between_clusterings)
 ![alt_text](../../assets/images/segmentation/image15.png "image_tooltip")
 
 <a name="diff_between_clusterings"></a>
@@ -329,5 +328,10 @@ Every pixel is defined by their (x,y) location, but also by their (r,g,b) values
 
 	Determined using L2, or Euclidean, distance in this feature space(x,y,r,g,b)
 
-Also, only to 10 nearest neighbors in feature space are chosen to keep a run time of O(n log n)
+Also, only to 10 nearest neighbors in feature space are chosen to keep a run time of O(n log n).
 
+We find using this method provides impressive results as an efficient, easy-to-implement method. 
+
+![alt_text](../../assets/images/segmentation/image19.png "image_tooltip")
+
+Example output from lecture 9.4
